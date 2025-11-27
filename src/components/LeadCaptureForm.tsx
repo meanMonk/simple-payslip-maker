@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
 
 interface LeadCaptureFormProps {
   page: string;
@@ -32,7 +32,7 @@ const LeadCaptureForm = ({ page, buttonText = "Get Notified", className = "" }: 
     try {
       const { error } = await supabase
         .from('leads')
-        .insert([{ email: email.trim(), page }]);
+        .insert([{ email: email.trim(), page: `payslip-${page}` }]);
 
       if (error) {
         if (error.code === '23505') {
