@@ -1,7 +1,8 @@
-import { useEffect } from "react";
-import { CheckCircle, Clock, FileText, Shield } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import { setupScrollTracking, trackCTAClick } from "@/lib/ga4";
+import { setupScrollTracking } from "@/lib/ga4";
+import { Clock, FileText, Shield } from "lucide-react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -34,8 +35,8 @@ const Index = () => {
             Create professional payslips instantly. Sign up for early access to our upcoming bulk salary slip generation feature.
           </p>
           <div className="max-w-md mx-auto">
-            <LeadCaptureForm 
-              page="home" 
+            <LeadCaptureForm
+              page="home"
               buttonText="Get Early Access"
               className="flex-col sm:flex-row"
             />
@@ -213,8 +214,8 @@ const Index = () => {
 
           <div className="bg-card border border-border rounded-lg p-6 text-center">
             <h4 className="text-xl font-semibold mb-4 text-foreground">Ready to simplify your payroll process?</h4>
-            <LeadCaptureForm 
-              page="home-seo-section" 
+            <LeadCaptureForm
+              page="home-seo-section"
               buttonText="Join the Waitlist"
               className="max-w-md mx-auto flex-col sm:flex-row"
             />
@@ -235,10 +236,18 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-3 text-foreground">Quick Links</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/contact" className="text-muted-foreground hover:text-foreground">Contact Us</a></li>
-                <li><a href="/terms" className="text-muted-foreground hover:text-foreground">Terms & Conditions</a></li>
-                <li><a href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</a></li>
-                <li><a href="/refund" className="text-muted-foreground hover:text-foreground">Refund Policy</a></li>
+                <li>
+                  <Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact Us</Link>
+                </li>
+                <li>
+                  <Link to="/terms" className="text-muted-foreground hover:text-foreground">Terms & Conditions</Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/refund" className="text-muted-foreground hover:text-foreground">Refund Policy</Link>
+                </li>
               </ul>
             </div>
             <div>
