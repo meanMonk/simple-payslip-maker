@@ -16,12 +16,12 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="text-xl font-bold text-foreground">
+          <Link to="/" className="text-xl font-bold text-foreground">
             SimplePayslipMaker.in
-          </a>
-          <a href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
+          </Link>
+          <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
-          </a>
+          </Link>
         </nav>
       </header>
 
@@ -259,7 +259,7 @@ const Index = () => {
             </div>
           </div>
           <div className="text-center text-sm text-muted-foreground border-t border-border pt-6">
-            <p>© 2024 SimplePayslipMaker.in. All rights reserved.</p>
+            <p>© 2025 SimplePayslipMaker.in. All rights reserved.</p>
           </div>
         </div>
       </footer>

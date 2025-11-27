@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Refund = () => {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border">
         <nav className="container mx-auto px-4 py-4">
-          <a href="/" className="text-xl font-bold text-foreground">
+          <Link to="/" className="text-xl font-bold text-foreground">
             SimplePayslipMaker.in
-          </a>
+          </Link>
         </nav>
       </header>
 
@@ -96,12 +98,12 @@ const Refund = () => {
 
       <footer className="border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 SimplePayslipMaker.in. All rights reserved.</p>
+          <p>© 2025 SimplePayslipMaker.in. All rights reserved.</p>
           <div className="flex justify-center gap-4 mt-4">
-            <a href="/terms" className="hover:text-foreground">Terms</a>
-            <a href="/privacy" className="hover:text-foreground">Privacy</a>
-            <a href="/refund" className="hover:text-foreground">Refund</a>
-            <a href="/contact" className="hover:text-foreground">Contact</a>
+            <Link to="/terms" className="hover:text-foreground">Terms</Link>
+            <Link to="/privacy" className="hover:text-foreground">Privacy</Link>
+            <Link to="/refund" className="hover:text-foreground">Refund</Link>
+            <Link to="/contact" className="hover:text-foreground">Contact</Link>
           </div>
         </div>
       </footer>

@@ -1,9 +1,10 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -33,9 +34,9 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border">
         <nav className="container mx-auto px-4 py-4">
-          <a href="/" className="text-xl font-bold text-foreground">
+          <Link to="/" className="text-xl font-bold text-foreground">
             SimplePayslipMaker.in
-          </a>
+          </Link>
         </nav>
       </header>
 
@@ -108,7 +109,7 @@ const Contact = () => {
                 <Phone className="text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground">Phone</h3>
-                  <p className="text-muted-foreground">+91 98765 43210</p>
+                  <p className="text-muted-foreground">+91 9175418388</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -116,7 +117,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-foreground">Address</h3>
                   <p className="text-muted-foreground">
-                    Bangalore, Karnataka
+                    Pune, Maharashtra
                     <br />
                     India
                   </p>
@@ -129,11 +130,11 @@ const Contact = () => {
 
       <footer className="border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 SimplePayslipMaker.in. All rights reserved.</p>
+          <p>© 2025 SimplePayslipMaker.in. All rights reserved.</p>
           <div className="flex justify-center gap-4 mt-4">
-            <a href="/terms" className="hover:text-foreground">Terms</a>
-            <a href="/privacy" className="hover:text-foreground">Privacy</a>
-            <a href="/refund" className="hover:text-foreground">Refund</a>
+            <Link to="/terms" className="hover:text-foreground">Terms</Link>
+            <Link to="/privacy" className="hover:text-foreground">Privacy</Link>
+            <Link to="/refund" className="hover:text-foreground">Refund</Link>
           </div>
         </div>
       </footer>
