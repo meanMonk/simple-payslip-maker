@@ -7,8 +7,10 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { initGA4, trackPageView } from "./lib/ga4";
 import Contact from "./pages/Contact";
 import Editor from "./pages/Editor";
+import DocumentEditor2 from "./pages/Editor2";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PDFToDocxConverter from "./pages/PdfToDocx";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
 import Terms from "./pages/Terms";
@@ -32,6 +34,8 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/editor" element={<Editor />} />
+      <Route path="/convertpdf" element={<PDFToDocxConverter />} />
+      <Route path="/editor2" element={<DocumentEditor2 />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
