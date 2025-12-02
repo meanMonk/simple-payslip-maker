@@ -1,16 +1,17 @@
-import { useEffect } from "react";
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Index from "./pages/Index";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { initGA4, trackPageView } from "./lib/ga4";
 import Contact from "./pages/Contact";
-import Terms from "./pages/Terms";
+import Editor from "./pages/Editor";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
-import NotFound from "./pages/NotFound";
-import { initGA4, trackPageView } from "./lib/ga4";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/editor" element={<Editor />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
